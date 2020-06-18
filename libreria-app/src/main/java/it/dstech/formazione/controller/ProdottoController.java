@@ -21,14 +21,14 @@ public class ProdottoController {
 @Autowired
 private ProdottoService service;
 
-@RequestMapping("/")
+@RequestMapping(value = "/")
 public ModelAndView home() {
 	List<Prodotto> listaProdotti = service.listAll();
 	ModelAndView mav = new ModelAndView("home");
 	mav.addObject("listaProdotti", listaProdotti);
 	return mav;
 }
-@RequestMapping("/new")
+@RequestMapping(value= "/new",  method = RequestMethod.POST)
 public String nuovoProdotto(Map<String, Object> model) {
 	Prodotto prodotto = new Prodotto();
 	model.put("prodotto", prodotto);

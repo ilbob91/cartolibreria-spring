@@ -11,7 +11,9 @@
 <body>
 <div align="center">
 	<h2>Gestionale della libreria/cartolibreria di BOB</h2>
-<h3><a href="new">Nuovo Prodotto</a></h3>
+<form action="new" method="post">
+<input type="submit" value="Nuovo Prodotto">
+</form><br><br>
 	<table border="1" cellpadding="5">
 		<tr>
 			<th>ID</th>
