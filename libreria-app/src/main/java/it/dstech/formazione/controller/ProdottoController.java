@@ -1,6 +1,7 @@
 package it.dstech.formazione.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,9 +29,9 @@ public ModelAndView home() {
 	return mav;
 }
 @RequestMapping("/new")
-public String nuovoProdotto(Model model) {
+public String nuovoProdotto(Map<String, Object> model) {
 	Prodotto prodotto = new Prodotto();
-	model.addAttribute("prodotto", prodotto);
+	model.put("prodotto", prodotto);
 	return "new_prodotto";
 }
 
